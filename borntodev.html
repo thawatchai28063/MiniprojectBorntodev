@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MiniprojectBorntodev</title>
+    <body>
+        <center>
+        <h1>Mini project borntodev</h1>
+        <br>
+        <h2>โปรแกรมคำนวณเกรด</h2>
+        
+        Enter your score:<input type="text" id="score"> <input
+        type="button" value="แสดงผลเกรด"
+        onclick="showGrade()"><br/>
+        <div id="div"></div>
+        <br>
+            <h1>จัดทำโดยนายธวัชชัย  จันกิจ</h1>
+        </center>
+        <script>
+        function showGrade() {
+        var score = document.getElementById("score").value;
+        var div =document.getElementById("div");
+        var result = "คะแนน คือ "+score+" ได้เกรด ";
+
+            if( score >= 80 ) {
+            result += "A";
+            } else if( score >= 75 ) {
+            result += "B+";
+            } else if( score >= 70 ) {
+            result += "B";
+
+            } else if( score >= 65 ) {
+            result += "C+";
+            } else if( score >= 60 ) {
+            result += "C";
+            } else if( score >= 55 ) {
+            result += "D+";
+            } else if( score >= 50 ) {
+            result += "D";
+            } else {
+            result += "E";
+            }
+
+            div.innerHTML = result;
+        }
+    </script>
+    </body>
+</html>
